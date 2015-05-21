@@ -1,0 +1,9 @@
+// this fella has to be first because it imports mixins!
+
+@import 'bourbon/bourbon';
+@import 'scss/mixins/variables';
+
+
+body {
+  color: $primary-font-color;
+}

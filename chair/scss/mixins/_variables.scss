@@ -1,1 +1,32 @@
+// colors
+
 $primary-font-color: #ff9900;
+$primary-link-color: #4c9cf1;
+$primary-link-hovor-color: #444;
+
+$primary-background-color: #f9f9f9;
+
+$primary-font-family: Helvetica Neue, Helvetica, Arial;
+
+$primary-font-size: 1.05em;
+$primary-line-height: 1.25em;
+
+// breakpoints
+   
+$S:     320px;   
+$M:     768px;     
+$L:     960px;     
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}

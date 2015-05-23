@@ -3,118 +3,173 @@
 @import 'scss/mixins/reset';
 @import 'bourbon/bourbon';
 @import 'scss/mixins/variables';
+@import 'scss/mixins/classes';
 
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,500,700);
 
 body {
-  color: $primary-font-color;
-  background: $primary-background-color;
-}
-
-body { 
   font-family: $primary-font-family;
 }
 
-a {
-  color: $primary-link-color;
-  text-decoration: none;
-  font-weight: bold;
+
+.container p{ 
+    text-align: left;
+  margin: 0 auto;
+  padding: 10px 0;
+  color: #ddd;
+    line-height: 25px;
+  font-size: 22px;
+    }
+.container h2{
+    font-size: 30px;
+    color: #4e4e4e;
+    line-height: 30px;
+   }
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    }
+
+
+body,ul,li{
+    padding: 0;
+    margin: 0;
 }
 
-a:hover {
-  color: $primary-link-hovor-color;
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #888;
 }
 
-img {
-
-  width: 100%;
-
+nav .orange{
+    color: #e88873;
+}
+nav .red{
+    color: #fd5f65;
+}
+nav .green{
+    color: #59b76f;
+}
+nav .darkblue{
+    color: #3f75aa;
+}
+nav .blue{
+    color: #65c6ea;
+}
+nav a:hover{
+    color: #414141;
+}
+.open{
+    top: 0;
+}
+.menu-btn{
+    cursor: pointer;
+    background-image: url('http://thecodeblock.com/wp-content/uploads/btn-hamburger.png');
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    background-color: #000;
+    display: inline;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.close-btn{
+    background-image: url('http://thecodeblock.com/wp-content/uploads/btn-close.png');
+}
+nav{
+    position: absolute;
+    top: -1600px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    transition: all 0.5s;
+    font-family: arial;
+}
+nav > ul{
+    max-width: 900px;
+    margin: 10px auto;
+    text-align: center;
+}
+nav > ul > li > a{
+    font-size: 72px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 0 40px 0;
+    display: block;
+}
+nav > ul > li{
+    padding: 40px 0 0 0;
+}
+nav > ul > li span{
+    font-style: italic;
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: #adadad;
+    text-transform: capitalize;
+}
+.line{
+    border-bottom: 1px solid #e0e0e0;
+}
+.sub-menu{
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 30px;
+}
+.sub-menu li{
+    display: inline-block;
+    font-size: 18px;
+    margin: 10px;
+    font-weight: bold;
 }
 
-header {
-  background: #fff;
-  width: 100%;
-  height: 76px;
-  // position: fixed;
-  top: 0;
-  left: 0;
-  border-bottom: 4px solid $primary-link-color;
+nav .email-form{
+    background: #65c6ea;
 }
-
-#logo{
-
-  margin: 20px;
-  float: left;
-  // width: 200px;
-  height: 40px;
-  // background: url(../img/logo.png) no-repeat center;
-  // display: block;
-
+nav .email-form h2{
+    font-size: 44px;
+    text-align: center;
+    padding-top: 40px;
+    color: #fff;
 }
-
-nav {
-
-  float: right;
-  padding: 20px;  
-
+nav .email-form form{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 0 50px 0;
 }
-
-#menu-icon {
-
-  display: hidden;
-  width: 40px;
-  height: 40px;
-  background: #4C8FEC url(../img/menu-icon.png) center;
-
+nav .email-form form .field{
+    padding: 10px;
+    margin: 0;
+    width: 70%;
+    box-sizing:border-box;
+    border: none;
+    font-size: 24px;
+    color: #414141;
 }
-
-a:hover#menu-icon {
-
-  background-color: #444;
-  border-radius: 4px 4px 0 0;
-
+nav .email-form form button{
+    background: #fff;
+    border: none;
+    margin: 0;
+    font-size: 24px;
+    padding: 10px 12px;
+    cursor: pointer;
 }
-
-ul {
-
-  list-style: none;
-
-}
-
-li {
-
-  display: inline-block;
-  float: left;
-  padding: 10px
-
-}
-
-.current {
-
-  color: #2262AD;
-
-}
-
-section {
-
-  margin: 80px auto 40px;
-  max-width: 980px;
-  position: relative;
-  padding: 20px
-
-}
-
-h1 {
-
-  font-size: 2em;
-  color: #2262AD;
-  line-height: 1.15em;
-  margin: 20px 0 ;
-
-}
-
-p {
-
-  line-height: 1.45em;
-  margin-bottom: 20px;
-
+@media all and (max-width: 500px){
+       nav > ul > li > a{
+            font-size: 44px;
+        }
+        nav .email-form h2{
+            font-size: 24px;
+        }
+        nav .email-form form .field{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    nav .email-form form button{
+            width:300px;
+            width:100%
+        }
 }
